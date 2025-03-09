@@ -1,0 +1,129 @@
+
+@import "./modules/components";
+@import "./modules/header";
+
+main {
+    .text-report {
+        position: relative;
+        z-index: 8;
+        margin: 10px auto;
+        width: clamp(50px, 90%, 1122px);
+        min-height: 100vh;
+        padding: 30px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: 20px;
+        font-family: font1_bold;
+        font-size: 1rem;
+        @include flx;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 5px;
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+
+            code {
+                font-size: 1.2em;
+            }
+        }
+
+        .numerology_method {
+            width: fit-content;
+            margin-inline: auto;
+            @include flx;
+            gap: 15px;
+
+            button.method_switcher {
+                border: 2px solid rgba(var(--secondary));
+                border-radius: 10px;
+                background: #252020;
+                color: #efefef;
+                padding: 10px 15px;
+            }
+
+            hr {
+                width: 30px;
+                opacity: 0.75;
+            }
+
+            small {
+                font-size: 0.75em;
+            }
+        }
+
+        h3, h4 {
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .lucky_numbers {
+            @include flx;
+            gap: 15px;
+        }
+
+        .boost-effects-history {
+            width: 100%;
+            padding-top: 20px;
+            @include flx;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .effects {
+                @include flx;
+                align-items: flex-start;
+                gap: 15px;
+                flex-direction: column;
+                
+                .effect {
+                    @include flx;
+                    justify-content: flex-start;
+                    gap: 15px;
+
+                    h5 {
+                        position: relative;
+                        font-size: 1.5em;
+                        cursor: pointer;
+                        
+                        &:after {
+                            content: "";
+                            width: 15%;
+                            height: 1px;
+                            background: rgba(var(--secondary), 1);
+                            @include pos_center;
+                            transform: translate(0,0);
+                            transition: all ease 1s;
+                            left: 0;
+                            top: 100%;
+                        }
+                        
+                        &:hover:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .complete_process {
+            margin-top: 55px;
+            @include flx;
+            flex-direction: column;
+            gap: 35px;
+
+            &>div {
+                @include flx;
+                gap: 25px;
+            }
+
+            .operator {
+                font-size: 3em;
+            }
+        }
+
+        .sanproject {
+            margin-block: 50px;
+        }
+    }
+}
