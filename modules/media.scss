@@ -1,0 +1,67 @@
+
+:root {
+    $media_screen: 1122px;
+}
+
+// desktop
+@media screen and (min-width: 1122px) {
+    .only_mobiles {
+        display: none;
+    }
+}
+
+// mobile
+@media screen and (max-width: 1122px) {
+    .only_desktop {
+        display: none;
+    }
+
+    :root {
+        font-size: 16px;
+    }
+
+    // Index
+    main {
+        section#lucky-numbers-generator {
+            h2 {
+			    font-size: 1.1rem;
+            }
+        }
+    }
+
+    // Process
+    .number_card {
+        height: 65px !important;
+        min-width: 65px !important;
+    }
+
+    .text-report {
+        width: 95% !important;
+        font-size: 0.7rem !important;
+        
+        .numerology_method {
+            small, hr {
+                display: none;
+            }
+        }
+
+        h3, h4 {
+            margin-top: 35px;
+        }
+        
+        .lucky_numbers {
+            margin-top: 15px;
+        }
+
+        .boost-effects-history {
+            .effects {
+                .effect {
+                    p {
+                        font-size: 0.65em;
+                    }
+                }
+            }
+        }
+    }
+
+}

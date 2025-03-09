@@ -1,0 +1,36 @@
+@media screen and (min-width: 1122px) {
+  .only_mobiles {
+    display: none;
+  }
+}
+@media screen and (max-width: 1122px) {
+  .only_desktop {
+    display: none;
+  }
+  :root {
+    font-size: 16px;
+  }
+  main section#lucky-numbers-generator h2 {
+    font-size: 1.1rem;
+  }
+  .number_card {
+    height: 65px !important;
+    min-width: 65px !important;
+  }
+  .text-report {
+    width: 95% !important;
+    font-size: 0.7rem !important;
+  }
+  .text-report .numerology_method small, .text-report .numerology_method hr {
+    display: none;
+  }
+  .text-report h3, .text-report h4 {
+    margin-top: 35px;
+  }
+  .text-report .lucky_numbers {
+    margin-top: 15px;
+  }
+  .text-report .boost-effects-history .effects .effect p {
+    font-size: 0.65em;
+  }
+}
