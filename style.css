@@ -520,6 +520,10 @@ section.top_navigation .page-title h2 {
   font-family: font1_bold;
 }
 
+.common_boost {
+  box-shadow: 0 0 0px 3px rgba(var(--accent2), 0.5);
+}
+
 header {
   background-color: rgba(var(--primary), 0.7);
   position: sticky;
@@ -613,7 +617,7 @@ header nav > ul li:hover ul {
   }
 }
 header nav > ul li ul {
-  top: 200%;
+  top: 100%;
   position: absolute;
   display: flex;
   justify-content: center;

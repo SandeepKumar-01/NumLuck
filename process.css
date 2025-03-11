@@ -520,6 +520,10 @@ section.top_navigation .page-title h2 {
   font-family: font1_bold;
 }
 
+.common_boost {
+  box-shadow: 0 0 0px 3px rgba(var(--accent2), 0.5);
+}
+
 header {
   background-color: rgba(var(--primary), 0.7);
   position: sticky;
@@ -613,7 +617,7 @@ header nav > ul li:hover ul {
   }
 }
 header nav > ul li ul {
-  top: 200%;
+  top: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -781,6 +785,10 @@ main .text-report h2 {
   text-align: center;
   font-size: 2em;
 }
+main .text-report h2 small {
+  font-size: 0.5em;
+  opacity: 0.75;
+}
 main .text-report h2 code {
   font-size: 1.2em;
 }
@@ -819,6 +827,7 @@ main .text-report .lucky_numbers {
   gap: 15px;
 }
 main .text-report .boost-effects-history {
+  margin-top: 25px;
   width: 100%;
   padding-top: 20px;
   display: flex;
@@ -847,7 +856,7 @@ main .text-report .boost-effects-history .effects .effect {
 }
 main .text-report .boost-effects-history .effects .effect h5 {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.3em;
   cursor: pointer;
 }
 main .text-report .boost-effects-history .effects .effect h5:after {
@@ -866,6 +875,9 @@ main .text-report .boost-effects-history .effects .effect h5:after {
 }
 main .text-report .boost-effects-history .effects .effect h5:hover:after {
   width: 100%;
+}
+main .text-report .boost-effects-history .effects .effect .number_card, main .text-report .boost-effects-history .effects .effect .process_number_card {
+  scale: 0.8;
 }
 main .text-report .complete_process {
   margin-top: 55px;

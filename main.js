@@ -18,34 +18,47 @@ $(document).ready(function() {
         "Report ready ✅"];
     
     $(".start_process").click(function(){
-        var intervalTime = 1000;
-
-        // reset
-        process.querySelectorAll(".process_container .step_circle").forEach((step_circle, index) => {
-            if (index == 0) {
-                step_circle.scrollIntoView({ behavior: "smooth" });
-            }
-
-            step_circle.style.borderWidth = "27px";
-        });
-
-        for (let index = 1; index < 7; index++) {
-            setTimeout(function(){
-                let step = process.querySelector(".process_container .step" + index);
-
-                let step_circle = step.querySelector(".step_circle");
-                step_circle.style.borderWidth = "0px";
-                
-                let step_to = step.querySelector("h5");
-                step_to.textContent = stepInProcess[index - 1];
-                step_to.scrollIntoView({ behavior: "smooth" });
-                
+        let processing_name = document.querySelector("#processing_name").value;
+        processing_name = processing_name.trim()
+        if (processing_name != "") {
+            var intervalTime = 1000;
+    
+            // reset
+            process.querySelectorAll(".process_container .step_circle").forEach((step_circle, index) => {
+                if (index == 0) {
+                    step_circle.scrollIntoView({ behavior: "smooth" });
+                }
+    
+                step_circle.style.borderWidth = "27px";
+            });
+    
+            for (let index = 1; index < 7; index++) {
                 setTimeout(function(){
-                    step_to.textContent = stepProcessed[index - 1];
-                }, intervalTime);
-
-            }, intervalTime * index);
+                    let step = process.querySelector(".process_container .step" + index);
+    
+                    let step_circle = step.querySelector(".step_circle");
+                    step_circle.style.borderWidth = "0px";
+                    
+                    let step_to = step.querySelector("h5");
+                    step_to.textContent = stepInProcess[index - 1];
+                    step_to.scrollIntoView({ behavior: "smooth" });
+                    
+                    setTimeout(function(){
+                        step_to.textContent = stepProcessed[index - 1];
+                    }, intervalTime);
+    
+                    if(index == 6) {
+                        setTimeout(function() {
+                            if(!window.open("process.html?enterednameis=" + processing_name, "_blank")) {
+                                window.location.href = "process.html?enterednameis=" + processing_name;
+                            }
+                        }, intervalTime * 2);
+                    }
+    
+                }, intervalTime * index);
+            }
         }
+
     });
 
 });
